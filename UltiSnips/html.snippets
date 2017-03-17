@@ -1,0 +1,28 @@
+snippet "(div|ul|section|nav)" "HTML block elements" rw
+<`!p snip.rv = match.group(1)`>
+  ${0:${VISUAL}}
+</`!p snip.rv = match.group(1)`>
+endsnippet
+
+snippet "(h[1-6]|p|span|li)" "HTML block elements" rw
+<`!p snip.rv = match.group(1)`>${0:${VISUAL}}</`!p snip.rv = match.group(1)`>
+endsnippet
+
+snippet "(hh)(.+)(?<!/)" "Any HTML block elements" rw
+<`!p snip.rv = match.group(2)`>
+  ${0:${VISUAL}}
+</`!p snip.rv = match.group(2)`>
+endsnippet
+
+snippet "(hh)(.+)(/)" "HTML inline elements" rw
+<`!p snip.rv = match.group(2)`$1 />$0
+endsnippet
+
+snippet a "Anchor" w
+<a href=$1>${2:${VISUAL}}</a>$0
+endsnippet
+
+snippet img "Image" w
+<img src=$1$2 />$0
+endsnippet
+
