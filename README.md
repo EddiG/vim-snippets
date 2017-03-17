@@ -1,2 +1,2 @@
-# vim-snippets
-The library of a most useful snippets (for me)
+# Vim UltiSnip snippets
+The library of the most useful snippets (for me).
