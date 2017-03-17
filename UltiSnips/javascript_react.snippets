@@ -1,0 +1,165 @@
+snippet rsc "React Stateless Component" b
+// @flow
+import React from 'react';
+import './${2:$1}.css';
+
+type Props = {
+  $0
+};
+
+const ${1:`!v expand('%:t:r')`} = ({  }: Props) => (
+  <div className="$2">
+  </div>
+)
+
+export default $1;
+endsnippet
+
+snippet rpc "React Pure Component" b
+// @flow
+import React, { PureComponent } from 'react';
+import './${2:$1}.css';
+
+type Props = {
+  $0
+};
+
+class ${1:`!v expand('%:t:r')`} extends PureComponent {
+  componentWillMount() {
+    $1
+  }
+
+  props: Props;
+
+  render() {
+    return (
+      <div className="$2">
+      </div>
+    )
+  }
+}
+
+export default $1;
+endsnippet
+
+snippet rrpc "React Redux Pure Component" b
+// @flow
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import './${2:$1}.css';
+
+type Props = {
+  $0
+};
+
+class ${1:`!v expand('%:t:r')`} extends PureComponent {
+  componentWillMount() {
+    $1
+  }
+
+  props: Props;
+
+  render() {
+    return (
+      <div className="$2">
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = state => ({
+
+})
+
+export default connect(mapStateToProps)($1);
+endsnippet
+
+snippet rrsc "React Redux Stateless Component" b
+// @flow
+import React from 'react';
+import { connect } from 'react-redux';
+import './${2:$1}.css';
+
+type Props = {
+  $0
+};
+
+const ${1:`!v expand('%:t:r')`} = ({  }: Props) => (
+  <div className="$2">
+  </div>
+)
+
+const mapStateToProps = state => ({
+
+})
+
+export default connect(mapStateToProps)($1);
+endsnippet
+
+snippet props "Get Property" i
+this.props.${1}
+endsnippet
+
+snippet state "Get State" i
+this.state.${1}
+endsnippet
+
+snippet ref "Ref" i
+ref={${1:ref} => { this.${2:name} = $1; }}
+endsnippet
+
+snippet set "Set State"
+this.setState({
+  ${1}: ${2}
+});
+endsnippet
+
+snippet cwm "Component Will Mount" b
+componentWillMount() {
+  $1
+}
+endsnippet
+
+snippet cdm "Component Did Mount" b
+componentDidMount() {
+  $1
+}
+endsnippet
+
+snippet cwrp "Component Will Receive Props" b
+componentWillReceiveProps(nextProps) {
+  $1
+}
+endsnippet
+
+snippet scup "Should Component Update" b
+shouldComponentUpdate(nextProps, nextState) {
+  $1
+}
+endsnippet
+
+snippet cwup "Component Will Update" b
+componentWillUpdate(nextProps, nextState) {
+  $1
+}
+endsnippet
+
+snippet cdup "Component Did Update" b
+componentDidUpdate(prevProps, prevState) {
+  $1
+}
+endsnippet
+
+snippet cwu "Component Will Unmount" b
+componentWillUnmount() {
+  $1
+}
+endsnippet
+
+snippet "ren(der)?" "Render" br
+render() {
+  return (
+    $1
+  )
+}
+endsnippet
