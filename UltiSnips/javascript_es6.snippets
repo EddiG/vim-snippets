@@ -44,7 +44,13 @@ snippet aff "Inline arrow function"
 (${1:args}) => ($2);
 endsnippet
 
-snippet caf "Const Function" b
+snippet cf "Const arrow function" b
+const ${1:name} = (${2:args}) => {
+  return $4;
+}${3:;}
+endsnippet
+
+snippet cff "Const inline arrow function" b
 const ${1:name} = (${2:args}) => {
   return $4;
 }${3:;}

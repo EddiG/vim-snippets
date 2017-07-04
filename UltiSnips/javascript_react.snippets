@@ -1,14 +1,13 @@
 snippet rsc "React Stateless Component" b
 // @flow
 import React from 'react';
-import './${2:$1}.css';
 
 type Props = {
   $0
 };
 
 const ${1:`!v expand('%:t:r')`} = ({  }: Props) => (
-  <div className="$2">
+  <div>
   </div>
 )
 
@@ -18,7 +17,6 @@ endsnippet
 snippet rpc "React Pure Component" b
 // @flow
 import React, { PureComponent } from 'react';
-import './${2:$1}.css';
 
 type Props = {
   $0
@@ -33,7 +31,7 @@ class ${1:`!v expand('%:t:r')`} extends PureComponent {
 
   render() {
     return (
-      <div className="$2">
+      <div>
       </div>
     )
   }
@@ -46,7 +44,6 @@ snippet rrpc "React Redux Pure Component" b
 // @flow
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import './${2:$1}.css';
 
 type Props = {
   $0
@@ -61,7 +58,7 @@ class ${1:`!v expand('%:t:r')`} extends PureComponent {
 
   render() {
     return (
-      <div className="$2">
+      <div>
       </div>
     )
   }
@@ -78,14 +75,13 @@ snippet rrsc "React Redux Stateless Component" b
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
-import './${2:$1}.css';
 
 type Props = {
   $0
 };
 
 const ${1:`!v expand('%:t:r')`} = ({  }: Props) => (
-  <div className="$2">
+  <div>
   </div>
 )
 
