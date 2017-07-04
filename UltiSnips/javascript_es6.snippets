@@ -27,17 +27,17 @@ endsnippet
 snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
 .`!p snip.rv = match.group(1)`(${1:(c, i)} => {
   return $2;
-});
+})$0
 endsnippet
 
 snippet "\.(map|filter|forEach|reduce)=" "Array method with an arrow function inline" rA
-.`!p snip.rv = match.group(1)`(${1:(c, i)} => $2);
+.`!p snip.rv = match.group(1)`(${1:(c, i)} => $2)$0
 endsnippet
 
 snippet af "Arrow function"
 (${1:args}) => {
-  return $3;
-}${2:;}
+  return $2;
+}$0
 endsnippet
 
 snippet aff "Inline arrow function"
@@ -46,43 +46,42 @@ endsnippet
 
 snippet cf "Const arrow function" b
 const ${1:name} = (${2:args}) => {
-  return $4;
-}${3:;}
+  return $3;
+}$0
 endsnippet
 
 snippet cff "Const inline arrow function" b
-const ${1:name} = (${2:args}) => {
-  return $4;
-}${3:;}
+const ${1:name} = (${2:args}) => $0
 endsnippet
 
 snippet expf "Export function" b
 export ${1:default }function($2) {
   $3
-};
+}$0
 endsnippet
 
 snippet fn* "Generator"
 function* ${1:name}($2) {
-  yield $3;
+  yield $0;
 }
 endsnippet
 
 snippet forof "For of loop" b
 for (let ${1:value} of ${2:iterable}) {
-  ${3:$1}
+  $0
 }
 endsnippet
 
 snippet class "Class"
 class ${1:Name} {
   constructor(${2:arg}) {
-    $3
+    super(${3:$2})
+    $4
   }
-  $4
+  $5
 }
 endsnippet
 
 snippet cl "console.log(...)"
-console.log('${2:$1: }', ${1});
+console.log(`${2:$1}`, $1);$0
 endsnippet
