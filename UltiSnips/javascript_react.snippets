@@ -16,13 +16,13 @@ endsnippet
 
 snippet rpc "React Pure Component" b
 // @flow
-import React, { PureComponent } from 'react';
+import React from 'react';
 
 type Props = {
   $0
 };
 
-class ${1:`!v expand('%:t:r')`} extends PureComponent {
+class ${1:`!v expand('%:t:r')`} extends React.PureComponent {
   componentWillMount() {
     $1
   }
@@ -42,14 +42,14 @@ endsnippet
 
 snippet rrpc "React Redux Pure Component" b
 // @flow
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 type Props = {
   $0
 };
 
-class ${1:`!v expand('%:t:r')`} extends PureComponent {
+class ${1:`!v expand('%:t:r')`} extends React.PureComponent {
   componentWillMount() {
     $1
   }
