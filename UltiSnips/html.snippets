@@ -9,6 +9,7 @@ snippet ! "HTML5 template" w
   </body>
 </html>
 endsnippet
+
 snippet "(div|ul|section|header|footer|main|nav)" "HTML block elements" rw
 <`!p snip.rv = match.group(1)`>
   ${0:${VISUAL}}
@@ -35,5 +36,9 @@ endsnippet
 
 snippet img "Image" w
 <img src=$1$2 />$0
+endsnippet
+
+snippet scs "Script" w
+<script src=$1></script>$0
 endsnippet
 
